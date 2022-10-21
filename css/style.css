@@ -279,6 +279,7 @@ body {
    opacity: 0.3;
 }
 .form-presentation__button {
+   cursor: pointer;
    flex: 0 0 188px;
    padding: 0 40px;
    font-weight: 700;
@@ -349,6 +350,9 @@ body {
 
 
 @media (max-width: 991.98px) {
+   .presentation {
+      padding-bottom: 80px;
+   }
    .presentation__container {
       padding-top: 150px;
    }
@@ -382,6 +386,9 @@ body {
 }
 
 @media (max-width: 767.98px) {
+   .presentation {
+      padding-bottom: 50px;
+   }
    .presentation__container {
       /* padding-top: 130px; */
    }
@@ -449,10 +456,10 @@ body {
    }
 }
 
-/* ==================================================== */
+/* ==================================================================================================================== */
 
 
-/* ========================== How it work============== */
+/* ========================== How it work ============================================================================= */
 
 
 .how-it-works {
@@ -466,39 +473,40 @@ body {
 }
 .how-it-works__cards {
    display: flex;
+
    justify-content: space-between;
-   column-gap: 10px;
+   column-gap: 30px;
    padding: 0 35px;
 
 }
-.how-it-works__element-card {
-   flex: 0 0 260px;
+.how-it-works__card {
+   flex: 0 1 260px;
+   /* max-width: 260px; */
 }
-.how-it-works__element-card_middle .card-how-it-works__image::before {
+.how-it-works__card_middle .card-how-it-works__image::before {
    content: "";
    display: inline-block;
-   width: 210px;
+   width: 210px; 
+   /* width: 233.33%; */
    height: 11px;
-   background: url(../images/main/howItWork/decor/before.svg) 0 0 no-repeat;
+   background: url(../images/main/howItWork/decor/before.svg) 0 0 / 100% no-repeat;
+   /* background-size: cover;
+   background-position: center; */
    position: absolute;
    top: 50%;
    left: -50%;
    transform: translate(-100%, -50%);
 }
-.how-it-works__element-card_middle .card-how-it-works__image::after {
+.how-it-works__card_middle .card-how-it-works__image::after {
    content: "";
    display: inline-block;
    width: 210px;
    height: 11px;
-   background: url(../images/main/howItWork/decor/before.svg) 0 0 no-repeat;
+   background: url(../images/main/howItWork/decor/before.svg) 0 0 / 100% no-repeat;
    position: absolute;
    top: 50%;
    right: -50%;
    transform: translate(100%, -50%) rotate(180deg);
-   /* transform: rotate(180deg); */
-}
-
-.how-it-works__body-card {
 }
 
 .card-how-it-works {
@@ -536,6 +544,8 @@ body {
    flex: 0 0 25px;
    height: 25px;
 }
+.card-how-it-works__body {
+}
 .card-how-it-works__body >*:not(:last-child) {
    margin-bottom: 15px;
 }
@@ -551,3 +561,66 @@ body {
    line-height: 1.62;
    text-align: center;
 }
+
+@media (max-width: 1199.98px) {
+   .how-it-works__card_middle .card-how-it-works__image::before,
+   .how-it-works__card_middle .card-how-it-works__image::after {
+      width: 150px; 
+   }
+}
+
+@media (max-width: 991.98px) {
+   .how-it-works {
+      padding: 50px 0 50px 0;
+   }
+   .how-it-works__card_middle .card-how-it-works__image::before,
+   .how-it-works__card_middle .card-how-it-works__image::after {
+      height: 5px;
+      width: 95px; 
+   }
+   .how-it-works__card_middle .card-how-it-works__image::before {
+      left: -25%;
+   }
+   .how-it-works__card_middle .card-how-it-works__image::after {
+      right: -25%;
+   }
+}
+
+@media (max-width: 767.98px) {
+   .how-it-works {
+      padding: 30px 0 30px 0;
+   }
+
+   .how-it-works__card_middle .card-how-it-works__image::before,
+   .how-it-works__card_middle .card-how-it-works__image::after {
+      display: none;
+   }
+
+   .how-it-works__cards {
+      flex-direction: column;
+      row-gap: 50px;
+   }
+   
+   .how-it-works__container >*:not(:last-child) {
+      margin-bottom: 30px;
+   }
+   .card-how-it-works >*:not(:last-child) {
+      margin-bottom: 15px;
+   }
+   .card-how-it-works__body >*:not(:last-child) {
+      margin-bottom: 10px;
+   }
+   .card-how-it-works__image {
+      flex: 0 0 70px;
+      width: 70px;
+   }
+
+   .how-it-works__card {
+      flex: 0 1 auto;
+   }
+   .how-it-works__title {
+      font-size: 35px;
+   }
+}
+
+/* ====================================================================================== */
