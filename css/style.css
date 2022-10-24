@@ -1022,3 +1022,131 @@ body {
    }
 }
 /* ======================================================= */
+
+/* ============================= Raviews ===================== */
+
+.reviews {
+   padding: 98px 0 105px;
+}
+.reviews__container {
+}
+.reviews__title {
+   max-width: 570px;
+   margin-bottom: 51px;
+}
+.reviews__cards {
+   display: flex;
+   row-gap: 30px;
+   margin: 0 -15px;
+   margin-bottom: 84px;
+}
+.reviews__card {
+   flex: 1 1 33.333%;
+   margin: 0 15px;
+}
+.reviews__partners {
+}
+
+
+.card-reviews {
+   border: 1px solid #EBEBEB;
+   border-radius: 10px;
+   padding: 52px 38px;
+}
+.card-reviews:hover {
+   border: 1px solid transparent;
+   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222), 3px 44px 54px rgba(0, 0, 0, 0.08);
+}
+.card-reviews__ratig {
+}
+.card-reviews__text {
+   max-width: 270px;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.75;
+   margin-bottom: 53px;
+}
+.card-reviews__author {
+}
+
+
+
+.author-reviews {
+   display: flex;
+   column-gap: 20px;
+   align-items: center;
+}
+.author-reviews__avatar {
+   width: 48px;
+   height: 48px;
+   border-radius: 50%;
+}
+.author-reviews__info {
+}
+.author-reviews__name {
+   font-weight: 700;
+   font-size: 16px;
+   line-height: 22px;
+}
+.author-reviews__city {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 1.35;
+   color: #666666;
+}
+
+
+.partners-reviews {
+   padding: 0 43px 0 36px;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   gap: 30px;
+}
+.partners-reviews__items {
+   flex: 0 1 673px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   column-gap: 30px;
+   row-gap: 30px;
+}
+.partners-reviews__item {
+   transition: 0.3s ease;
+}
+.partners-reviews__item:hover {
+   transform: scale(1.2);
+}
+.partners-reviews__img {
+}
+.partners-reviews__info {
+   flex: 0 1 311px;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 1.5;
+}
+.partners-reviews__link {
+   text-decoration-line: underline;
+   color: #2CBDE7;
+}
+
+@media (max-width: 991.98px) {
+   .reviews {
+      padding: 50px 0;
+   }
+   .reviews__cards {
+      flex-wrap: wrap;
+   }
+   .reviews__card {
+
+   }
+
+}
+@media (max-width: 767.98px) {
+   .reviews {
+      padding: 30px 0;
+   }
+   .card-reviews {
+      padding: 30px 20px;
+   }
