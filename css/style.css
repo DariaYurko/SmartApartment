@@ -4,7 +4,7 @@
  /* ====================== Обнуление ====================================== */
 
 
- *,
+*,
 *::before,
 *::after {
   margin: 0;
@@ -73,18 +73,18 @@ body {
 @media (max-width: 1199.98px) {
    [class*=__container] {
       max-width: 970px;
-    }
+   }
 }
 @media (max-width: 991.98px) {
    [class*=__container] {
       max-width: 750px;
-    }
+   }
 }
 @media (max-width: 767.98px) {
    [class*=__container] {
       max-width: none;
       padding: 0 15px;
-    }
+   }
 }
 
 .main {
@@ -1041,17 +1041,21 @@ body {
    margin-bottom: 84px;
 }
 .reviews__card {
-   flex: 1 1 33.333%;
-   margin: 0 15px;
+   flex: 0 1 33.333%;
+   padding: 0 15px;
 }
 .reviews__partners {
 }
 
 
 .card-reviews {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
    border: 1px solid #EBEBEB;
    border-radius: 10px;
    padding: 52px 38px;
+   transition: 0.3s ease;
 }
 .card-reviews:hover {
    border: 1px solid transparent;
@@ -1060,6 +1064,7 @@ body {
 .card-reviews__ratig {
 }
 .card-reviews__text {
+   flex-grow: 1;
    max-width: 270px;
    font-style: normal;
    font-weight: 400;
@@ -1078,6 +1083,7 @@ body {
    align-items: center;
 }
 .author-reviews__avatar {
+   align-self: start;
    width: 48px;
    height: 48px;
    border-radius: 50%;
@@ -1106,7 +1112,9 @@ body {
 }
 .partners-reviews__items {
    flex: 0 1 673px;
+
    display: flex;
+   flex-wrap: wrap;
    align-items: center;
    justify-content: space-between;
    column-gap: 30px;
@@ -1137,9 +1145,17 @@ body {
    }
    .reviews__cards {
       flex-wrap: wrap;
+      margin: 0 -15px;
+      margin-bottom: 50px;
    }
    .reviews__card {
-
+      flex: 0 1 50%;
+   }
+   .card-reviews {
+      padding: 30px 20px;
+   }
+   .card-reviews__text {
+      max-width: 100%;
    }
 
 }
@@ -1147,6 +1163,11 @@ body {
    .reviews {
       padding: 30px 0;
    }
-   .card-reviews {
-      padding: 30px 20px;
+   .reviews__card {
+      flex: 1 1 100%;
    }
+   .card-reviews__text {
+      margin-bottom: 30px;
+   }
+   
+}
