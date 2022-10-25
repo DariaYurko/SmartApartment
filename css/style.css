@@ -1169,5 +1169,117 @@ body {
    .card-reviews__text {
       margin-bottom: 30px;
    }
-   
 }
+
+
+/* ============================ Subscribe ============ */
+
+.subscribe {
+   padding-top: 105px;
+   padding-bottom: 105px;
+   background-color: #FBFCFC;;
+}
+.subscribe__container {
+}
+.subscribe__title {
+   text-align: center;
+   font-weight: 700;
+   font-size: 45px;
+   line-height: 144.2%;
+   margin-bottom: 11px;
+}
+.subscribe__subtitle {
+   text-align: center;
+   font-weight: 700;
+   font-size: 23px;
+   line-height: 144.2%;
+   letter-spacing: 0.02em;
+   color: #31353B;
+   margin-bottom: 34px;
+}
+.subscribe__form {
+   max-width: 686px;
+   margin: 0 auto;
+}
+
+
+.form-subscribe {
+   padding: 26px 30px 26px 45px;
+   background: #FFFFFF;
+   box-shadow: 0px 163px 80px rgba(0, 0, 0, 0.04), 0px 105.648px 46.8519px rgba(0, 0, 0, 0.0303704), 0px 62.7852px 25.4815px rgba(0, 0, 0, 0.0242963), 0px 32.6px 13px rgba(0, 0, 0, 0.02), 0px 13.2815px 6.51852px rgba(0, 0, 0, 0.0157037), 0px 3.01852px 3.14815px rgba(0, 0, 0, 0.00962963);
+   display: flex;
+   justify-content: space-between;
+   column-gap: 10px;
+   /* align-items: center; */
+}
+.form-subscribe__input-block {
+   flex: 1 1 auto;
+   display: flex;
+   flex-direction: column;
+   row-gap: 11px;
+}
+.form-subscribe__label {
+   cursor: pointer;
+   font-weight: 500;
+   font-size: 17px;
+   line-height: 144.2%;
+   opacity: 0.2;
+}
+.form-subscribe__input {
+   /* width: 100%; */
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 144.2%;
+}
+.form-subscribe__input::placeholder {
+   opacity: 0.2;
+   color: #31353B;
+}
+.form-subscribe__input:focus::placeholder {
+   color: transparent;
+}
+.form-subscribe__btn {
+   cursor: pointer;
+   padding: 0 39px;
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 144.2%;
+
+}
+
+@media (max-width: 991.98px) {
+   .subscribe {
+      padding-top: 50px;
+      padding-bottom: 50px;
+   }
+   .subscribe__title {
+      font-size: 30px;
+   }
+   .subscribe__subtitle {
+      font-size: 20px;
+   }
+   .subscribe__form {
+      max-width: 100%;
+   }
+
+@media (max-width: 767.98px) {
+   .subscribe {
+      padding-top: 30px;
+      padding-bottom: 30px;
+   }
+   .form-subscribe {
+      flex-direction: column;
+      row-gap: 20px;
+   }
+   .form-subscribe__input-block {
+      align-items: center;
+   }
+   .form-subscribe__input {
+      text-align: center;
+   }
+   .form-subscribe__btn {
+      padding: 10px;
+   }
+   .subscribe__subtitle {
+      margin-bottom: 10px;
+   }
