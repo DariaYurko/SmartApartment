@@ -43,7 +43,27 @@ body {
 
 
 /* ================================================================ */
-
+[class*=__container] {
+   max-width: 1200px; 
+   margin: 0 auto;
+   padding: 0 15px;
+ }
+ 
+ @media (max-width: 1199.98px) {
+    [class*=__container] {
+       max-width: 970px;
+    }
+ }
+ @media (max-width: 991.98px) {
+    [class*=__container] {
+       max-width: 750px;
+    }
+ }
+ @media (max-width: 767.98px) {
+    [class*=__container] {
+       max-width: none;
+    }
+ }
 /* ==================================================================== */
 
 
@@ -63,27 +83,12 @@ body {
   min-height: 100%; /*чтоб wrapper всегда занимал все высоту*/
   display: flex;
   flex-direction: column;
+  padding-right: 101px;
+  position: relative;
 }
-
-[class*=__container] {
-  max-width: 1170px; 
-  margin: 0 auto;
-}
-
-@media (max-width: 1199.98px) {
-   [class*=__container] {
-      max-width: 970px;
-   }
-}
-@media (max-width: 991.98px) {
-   [class*=__container] {
-      max-width: 750px;
-   }
-}
-@media (max-width: 767.98px) {
-   [class*=__container] {
-      max-width: none;
-      padding: 0 15px;
+@media (max-width:767.98px) {
+   .wrapper {
+      padding-right: 61px;
    }
 }
 
@@ -119,7 +124,11 @@ body {
    width: 100%;
    height: 100%;
 }
-
+@media (max-width: 767.98px) {
+   .wrapper__social {
+      right: 20px;
+   }
+}
 
 /* ===================== Common blocks ================================ */
 
@@ -216,8 +225,8 @@ body {
    left: 0;
    width: 100%;
    z-index: 100;
-
    padding: 36px 0;
+   padding-right: 101px;
 }
 .header__container {
    display: flex;
@@ -232,6 +241,9 @@ body {
 .header__menu {}
 
 @media (max-width: 767.98px) {
+   .header {
+      padding-right: 61px;
+   }
    .header__container {
       flex-direction: column;
    }
@@ -317,6 +329,7 @@ body {
 
 .form-presentation {
    display: flex;
+   flex-wrap: wrap;
    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222);
 
 }
@@ -340,18 +353,23 @@ body {
 }
 .form-presentation__button {
    cursor: pointer;
-   flex: 0 0 188px;
-   padding: 0 40px;
+   flex: 1 0 188px;
+   padding: 32px 40px;
    font-weight: 700;
    font-size: 17px;
    line-height: 1.35;
    letter-spacing: 0.01em;
    box-shadow: none;
 }
-
-
 .presentation__slider {
 }
+.presentation__partners {
+   max-width: 65%;
+   position: relative;
+   z-index: 50;
+}
+
+/* =========================== Swiper ==================================== */
 .swiper {
 }
 .swiper-wrapper {
@@ -368,17 +386,12 @@ body {
    top: 0;
    left: 0;
 }
-
 .swiper-button-next {
 }
 
-
-.presentation__partners {
-   max-width: 65%;
-   position: relative;
-   z-index: 50;
-}
 /* ========================== Partners ====================== */
+
+
 .partners {
    display: flex;
    flex-direction: column;
@@ -445,8 +458,8 @@ body {
       font-size: 25px;   
    }
    .form-presentation__button {
-      padding: 0 20px;
-      font-size: 20px;
+      padding: 20px 20px;
+      /* font-size: 20px; */
    }
 }
 
